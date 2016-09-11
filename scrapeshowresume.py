@@ -1,9 +1,10 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import pymysql
+from db import conshowtime
 import re
 from datetime import datetime
-conn = pymysql.connect(host='127.0.0.1', unix_socket='/tmp/mysql.sock', user='root', passwd='eminem27', db='mysql')
+conn = conshowtime()
 cur=conn.cursor()
 cur.execute("USE ShowTime")
 
